@@ -1,0 +1,25 @@
+poppler-data (0.4.0-1) unstable; urgency=low
+
+  Drop below fifteen "*-RKSJ-H CMap resources"
+   - CNS01-RKSJ-H, CNS02-RKSJ-H, CNS03-RKSJ-H, CNS04-RKSJ-H, CNS05-RKSJ-H, 
+     CNS06-RKSJ-H, CNS07-RKSJ-H, CNS15-RKSJ-H, GB-RKSJ-H, GBT-RKSJ-H, HK-RKSJ-H,
+     Hojo-RKSJ-H, KSC-RKSJ-H, KSC2-RKSJ-H and TCVN-RKSJ-H
+
+  Those files were included until 0.2.1, but were excluded from 0.3.0 by 
+  upstream.
+ 
+  Those were used for the production of "CJKV Information Processing" First 
+  Edition and are obsolete and deprecated. 
+
+  We can see any PDF files that was created with those resources without those
+  files because application such as FrameMaker would change the encoding to 
+  "Identity-H". And please note that not all RJSJ-H files were removed, for
+  example, mostly used 83pv-RKSJ-H and 90ms-RKSJ-H are included to this 
+  package (Thanks you for the explanation, Ken Lunde (Adobe Corp.)).
+
+  Dropped files may be released under FLOSS license in some day, but I don't 
+  know when it comes. If anyone has any trouble with this change, please 
+  report a bug to Debian BTS.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Wed, 23 Dec 2009 09:26:20 +0900
+

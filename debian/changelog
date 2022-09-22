@@ -1,0 +1,422 @@
+poppler-data (0.4.11-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control
+    - Set Standards-Version: 4.6.0
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 09 Sep 2021 01:31:46 +0900
+
+poppler-data (0.4.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control
+    - Set debhelper-compat (= 13)
+    - Set Standards-Version: 4.5.0
+    - use dh12
+    - add Rules-Requires-Root: no
+  * debian/copyright
+    - Update my email address
+    - Fix field name cases in debian/copyright (Upstream-contact =>
+      Upstream-Contact, Upstream-name => Upstream-Name).
+  * debian/source/lintian-overrides
+    - Remove unnecessary overrides
+  * Trim trailing whitespace.
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 11 Nov 2020 00:03:09 +0900
+
+poppler-data (0.4.9-2) unstable; urgency=medium
+
+  * Fix typo in previous changelog
+  * debian/control
+    - Add Vcs-*
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 01 May 2018 23:26:35 +0900
+
+poppler-data (0.4.9-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control
+    - set Standards-Version: 4.1.4
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 29 Apr 2018 22:21:13 +0900
+
+poppler-data (0.4.8-3) unstable; urgency=medium
+
+  * debian/compat
+    - set 11
+  * debian/control
+    - set Build-Depends: debhelper (>= 11)
+    - set Standards-Version: 4.1.3
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 24 Feb 2018 22:52:00 +0900
+
+poppler-data (0.4.8-2) unstable; urgency=medium
+
+  * debian/control,copyright
+    - use https for upstream URL
+  * debian/copyright
+    - update copyright year
+  * debian/control
+    - set Standards-Version: 4.1.1
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 15 Oct 2017 07:36:39 +0900
+
+poppler-data (0.4.8-1) unstable; urgency=low
+
+  * New upstream release
+    - add cMap/Adobe-CNS1/Adobe-CNS1-7
+    - update many cMap files
+  * include Identity-UTF16-H taken from ghostscript 9.21 as additional multiple
+    upstream tarball (Closes: #861363)
+  * debian/copyright
+    - add Identity-UTF16-H license (AGPL-3+)
+  * debian/{install,links}
+    - install Identity-UTF16-H as well
+  * update debian/source/lintian-overrides
+  * debian/control
+    - set Standards-Version: 4.0.1
+  * add debian/watch
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 17 Aug 2017 06:09:00 +0900
+
+poppler-data (0.4.7-8) unstable; urgency=medium
+
+  * debian/compat
+    - set 10
+  * debian/control
+    - set Depends: debhelper (>= 10)
+    - set Standards-Version: 3.9.8
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 10 Nov 2016 21:40:25 +0900
+
+poppler-data (0.4.7-7) unstable; urgency=medium
+
+  * fix debian/{postinst,prerm}
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 03 Jan 2016 15:52:11 +0900
+
+poppler-data (0.4.7-6) unstable; urgency=medium
+
+  * debian/copyright
+    - fix upstream copyright as BSD-3
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 15 Dec 2015 06:57:13 +0900
+
+poppler-data (0.4.7-5) unstable; urgency=medium
+
+  * debian/control
+    - make multi-arch: foreign (Closes: #794579)
+      Thanks to Helmut Grohne <helmut@subdivi.de>
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 20 Nov 2015 22:45:02 +0900
+
+poppler-data (0.4.7-4) unstable; urgency=medium
+
+   * debian/changelog
+     - fix wrong Closed entry number.
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 10 May 2015 21:27:06 +0900
+
+poppler-data (0.4.7-3) unstable; urgency=medium
+
+  * debian/postinst,prerm
+    - fix broken check (Closes: Bug#784901)
+      Thanks to Jack <debian@jack.fr.eu.org>
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 10 May 2015 21:14:37 +0900
+
+poppler-data (0.4.7-2) unstable; urgency=medium
+
+  * debian/source/lintian-overrides
+    - add it to ignore some false-positive warning
+  * debian/postinst,prerm
+    - fix "command-with-path-in-maintainer-script" warning
+  * udpate debian/copyright to cover whole files
+  * debian/control
+    - set Standards-Verson: 3.9.6
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 10 May 2015 14:33:26 +0900
+
+poppler-data (0.4.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/rules
+    - remove override_dh_builddeb, since package is compressed with XZ by
+      default.
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 20 Aug 2014 07:12:51 +0900
+
+poppler-data (0.4.6-5) unstable; urgency=medium
+
+  * debian/control
+    - set "Standards-Version: 3.9.5"
+    - replace "Suggests: fonts-nanum" from fonts-unfonts-core.
+      Thanks to Changwoo Ryu <cwryu@debian.org> for the suggestion.
+      (Closes: #739827)
+  * debian/90gs-cjk-resource-korea1.conf
+    - replace fonts as above change
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 23 Feb 2014 19:49:47 +0900
+
+poppler-data (0.4.6-4) unstable; urgency=low
+
+  [ Sebastien Bacher ]
+  * debian/links: fix 'janan' typo (Closes: #711041)
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 04 Jun 2013 18:39:38 +0900
+
+poppler-data (0.4.6-3) unstable; urgency=low
+
+  * debian/control
+    - set "Standards-Version: 3.9.4"
+  * debian/rules,install
+    - move installation from rules to install file.
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 21 Mar 2013 17:13:18 +0900
+
+poppler-data (0.4.6-2) unstable; urgency=low
+
+  * upload to unstable
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 29 Nov 2012 15:40:53 +0900
+
+poppler-data (0.4.6-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 17 Oct 2012 09:31:54 +0900
+
+poppler-data (0.4.5-10) unstable; urgency=low
+
+  * debian/rules
+    - use default xz compression rate is better result than -z9 -Sextream
+      (Closes: #679774)
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 04 Aug 2012 11:46:18 +0900
+
+poppler-data (0.4.5-9) unstable; urgency=low
+
+  * debian/control
+    - improve description (Closes: #674569)
+      Thanks to Justin B Rye <jbr@edlug.org.uk> for help.
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 02 Aug 2012 21:10:56 +0900
+
+poppler-data (0.4.5-8) unstable; urgency=low
+
+  * debian/rules
+    - add "-Sextreme -z9" option to dh_debbuild
+  * debian/control
+    - add "Pre-Depends: dpkg (>= 1.15.6~)"
+    - bump up debhelper version to deal with xz option
+    - remove gs-cjk-resource-6.0 and gs-cjk-resource-6.5 since it seems to be
+      private package or something, had never existed in Official repository.
+    - move gs-aladdin (<= 6.50-5) from Conflicts: to Breaks: to be more
+      Policy polite
+  * debian/compat
+    - set 9
+  * debian/copyright
+    - update "Format:" field to
+      http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 21 Jun 2012 06:30:17 +0900
+
+poppler-data (0.4.5-7) unstable; urgency=low
+
+  * debian/control
+    - update "fonts-arphic-ukai, fonts-arphic-uming", not ttf-*
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 28 May 2012 04:55:03 +0900
+
+poppler-data (0.4.5-6) unstable; urgency=low
+
+  * debian/90gs-cjk-resource-*.conf
+    - import from gs-cjk-resource package
+  * debian/copyright
+    - update
+  * debian/control
+    - adjust dependency to work upgrade smoothly.
+      Thanks to Osamu Aoki (Closes: #674572)
+    - now this package provides functions of gs-cjk-resource,
+      so import "Enhances: ghostscript", Suggests and Conflicts from
+      gs-cjk-resource package.
+  * debian/dirs
+    - add "etc/ghostscript/cidfmap.d"
+  * debian/postinst,prerm
+    - import from gs-cjk-resource
+  * debian/compat
+    - set 7
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 26 May 2012 04:52:26 +0900
+
+poppler-data (0.4.5-5) unstable; urgency=low
+
+  * Upload to unstable with cmap-adobe* and gs-cjk-resource maintainer's ACK.
+  * debian/rules
+    - use "dh_debbuild -- -Zxz" to compress package with xz.
+  * debian/copyright
+    - fix "W: copyright-refers-to-versionless-license-file"
+      At that time, /usr/share/common-licenses/GPL seemed to be GPL-2, so
+      specify it as GPL-2
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 24 May 2012 10:55:25 +0900
+
+poppler-data (0.4.5-4) experimental; urgency=low
+
+  * debian/control
+    - change from "Conlicts:" to "Breaks:" and "Recommends:" to
+      "Suggests:" (Closes: #661865)
+    - set "Standards-Version: 3.9.3"
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 10 Mar 2012 19:52:58 +0900
+
+poppler-data (0.4.5-3) experimental; urgency=low
+
+  * Replace cmap-adode-* and gs-cjk-resource
+  * debian/control
+    - add {Conflicts:, Replaces:, Provides:} to gs-cjk-resource,
+      cmap-adobe-{korea1, cns1, japan1, japan2, gb1}
+    - update description
+  * debian/{links, dirs, install}
+    - add it to replace above packages
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 08 Oct 2011 06:37:19 +0900
+
+poppler-data (0.4.5-2) unstable; urgency=low
+
+  * debian/copyright
+    - fix lintian warning
+       "syntax-error-in-dep5-copyright"
+       "obsolete-field-in-dep5-copyright"
+       "comma-separated-files-in-dep5-copyright"
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 17 Sep 2011 13:17:29 +0900
+
+poppler-data (0.4.5-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    - Bump up "Standards-Version: 3.9.2" with no change.
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 07 Sep 2011 23:59:17 +0900
+
+poppler-data (0.4.4-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    - Bump up "Standards-Version: 3.9.1" with no change.
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 07 Nov 2010 12:54:56 +0900
+
+poppler-data (0.4.3-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    - update my address
+    - Bump up "Standards-Version: 3.9.0" with no change.
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 20 Jul 2010 20:21:43 +0900
+
+poppler-data (0.4.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sun, 02 May 2010 13:39:28 +0900
+
+poppler-data (0.4.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sat, 01 May 2010 15:15:17 +0900
+
+poppler-data (0.4.0-3) unstable; urgency=low
+
+  * debian/NEWS:
+    - improve "debian-news-entry-uses-asterisk" and
+      "debian-news-entry-without-blank-line"
+  * debian/control:
+    - set "Standards-Version: 3.8.4"
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sun, 28 Feb 2010 22:10:13 +0900
+
+poppler-data (0.4.0-2) unstable; urgency=low
+
+  * debian/NEWS:
+    - reformat it.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 31 Dec 2009 14:13:53 +0900
+
+poppler-data (0.4.0-1) unstable; urgency=low
+
+  * New upstream release
+    - move from non-free to main, because of non-free part of CMap upstream's
+      license is changed, now it is distributed under BSD style one.
+      Thanks to Adobe!
+    - now add "Mapping Resources for PDF" as well.
+      http://opensource.adobe.com/wiki/display/pdfmapping/Mapping+Resources+for+PDF
+      (Closes: #548181, #558225)
+    - drop "*-RKSJ-H CMap resources", see NEWS.Debian file.
+  * debian/control:
+    - move it from non-free to main
+  * debian/copyright:
+    - reflect CMAP upstream (Adobe CMAP license) change.
+    - The cidToUnicode, nameToUnicode and unicodeMap data files are Copyright
+      Glyph & Cog, LLC and are under the GPL2 license
+    - new style format suggested as "Machine-readable debian/copyright"
+  * debian/source/format: switch to source format 3.0
+  * add "Adobe-Identity-0 (Special Purpose)", Identity-H and Identity-V file.
+    poppler-data upstream reject to add it, but this debian package include it.
+  * use debhelper7
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Wed, 30 Dec 2009 10:30:20 +0900
+
+poppler-data (0.2.1-5) unstable; urgency=low
+
+  * debian/control: delete "Suggests: libpoppler4"
+    Fix "Suggests on lipoppler4 should be dropped as libpoppler already
+    comes from poppler-utils" (Closes: #533263)
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Tue, 16 Jun 2009 21:22:27 +0900
+
+poppler-data (0.2.1-4) unstable; urgency=low
+
+  * debian/control: "Suggests: libpoppler4", remove libpoppler3.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sat, 16 May 2009 11:32:03 +0900
+
+poppler-data (0.2.1-3) unstable; urgency=low
+
+  * debian/control:
+    - "Suggests: libpoppler4|libpoppler3", now libpoppler4 is in unstable.
+    - Bump up Standards-Version: 3.8.1
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sat, 14 Mar 2009 03:11:21 +0900
+
+poppler-data (0.2.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * debian/copyright: fix "copyright-with-old-dh-make-debian-copyright"
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Tue, 10 Mar 2009 18:09:38 +0900
+
+poppler-data (0.2.1-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 16 Oct 2008 16:54:46 +0900
+
+poppler-data (0.2.0-2) unstable; urgency=low
+
+  * debian/control
+    - add "DM-Upload-Allowed: yes", because I'm DM :)
+    - fix "poppler-data should suggest libpoppler3" (Closes: #496268)
+    - change "Priority: optional" from extra, same as cmap-adobe-*
+    - add some descriptions for cmap-adobe-* users
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sun, 24 Aug 2008 11:18:16 +0900
+
+poppler-data (0.2.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #451799)
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 31 Jul 2008 09:37:44 +0900

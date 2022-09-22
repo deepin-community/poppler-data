@@ -1,0 +1,4 @@
+debian/SMgoJ	usr/share/ghostscript/fonts/
+debian/90gs-cjk-resource-*.conf	etc/ghostscript/cidfmap.d/
+ai0/CMap/*	usr/share/poppler/cMap/
+from-ghostscript/Resource/CMap/*	usr/share/poppler/cMap/

@@ -1,0 +1,3 @@
+etc/ghostscript/cidfmap.d
+var/lib/ghostscript/CMap/
+usr/share/ghostscript/fonts
